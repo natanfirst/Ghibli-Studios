@@ -10,7 +10,7 @@ interface Names {
 }
 
 // {value: 1}
-const Pokemon: React.FC<Names> = ({names}) => {
+const Test: React.FC<Names> = ({names}) => {
   const [poke, setPoke] = useState({
     name: "teste",
   });
@@ -28,4 +28,4 @@ const Pokemon: React.FC<Names> = ({names}) => {
   );
 };
 
-export default connect((state: Names) => ({names: state.names}))(Pokemon)
+export default connect((state: Names) => ({names: state.names}))(Test)
