@@ -1,0 +1,16 @@
+version: '3.9'
+ 
+services:    
+    pokedex_front_end:
+      container_name: pokedex_front_end
+      build:
+        context: .
+        dockerfile: Dockerfile  
+      command:
+          yarn start
+      volumes:
+          - .:/usr/pokedex      
+      ports:
+        - "3000:3000"  
+      mem_limit: 500m
+  
